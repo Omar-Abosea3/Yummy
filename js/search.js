@@ -21,7 +21,6 @@ export default function showSearch(){
         hideClick();
         $('#searchName').keyup(function(e){
             let mealName = e.target.value;
-            console.log(mealName);
             if(mealName != ''){
                 searchName(mealName);
             }
@@ -42,7 +41,6 @@ function searchName(name){
         let x = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${name}`);
         let res = await x.json();
         let arr = res.meals;
-        console.log(arr);
         if(arr != null){
             $('.foodContainer1').html('');
             for(let i = 0 ; i < arr.length ; i++ ){
@@ -74,7 +72,6 @@ function searchLetter(letter){
         let x = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?f=${letter}`);
         let res = await x.json();
         let arr = res.meals;
-        console.log(arr);
         $('.foodContainer1').html('');
         for(let i = 0 ; i < arr.length ; i++ ){
             $('.foodContainer1').append(`<div class="col-12 col-sm-12 col-md-6 col-lg-3 px-2">
