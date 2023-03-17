@@ -1,0 +1,204 @@
+body{
+    overflow: hidden;
+    background-color: #0D0D0D;
+}
+aside{
+    width: 25%;
+    background-color: #000000;
+    z-index: 999;
+}
+.Links{
+    width: 85%;
+    overflow-y: hidden;
+}
+.navigator{
+    width: 15%;
+    background-color: white !important;
+}
+.myToggler{
+    cursor: pointer;
+}
+.LinksParent{
+    position: relative;
+    height: 60%;
+}
+.navLinks{
+   top: 0%;
+   right: 0%;
+   left: 0%;
+   bottom: 0%;
+   height: 100%;
+}
+
+.navLinks1{
+    position: relative;
+    height: 30px;
+
+}
+.navLinks1 p{
+    position: absolute;
+    top: 700%;
+    height: 100%;
+    z-index: 99999;
+    color: white;
+}
+.myToggler div{
+    height: 3px;
+    background-color: black;
+}
+aside li,i{
+    cursor: pointer;
+}
+.loadingScrean{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}
+.Food{
+    cursor: pointer;
+}
+.foodLayer{
+    transform: translateY(100%);
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+}
+.Food:hover .foodLayer{
+    transform: translateY(0%);
+}
+
+.Recipes,.Tags{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.Recipes li {
+    background-color: #CFF4FC;
+    color: #0575B1;
+    padding: 0px 5px;
+    margin: 0px 5px 15px 0px;
+    font-size: 18px;
+    font-weight: lighter;
+    border-radius: 10px;
+    text-align: center;
+}
+.Tags li{
+    background-color: #F8D7DA;
+    color: #842029;
+    padding: 0px 5px;
+    width: 15%;
+    margin: 0px 5px 10px 0px;
+    font-size: 18px;
+    font-weight: lighter;
+    border-radius: 10px;
+    text-align: center;
+}
+.foodLayer1{
+    transform: translateY(101%);
+    transition: all 0.3s;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+.foodLayer1 p{
+    font-size: 16px;
+}
+.Food:hover .foodLayer1{
+    transform: translateY(0%);
+}
+.foodLayer2{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.foodContainer{
+    position: relative;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: 0px 20px 0px 10px;
+}
+.foodContainer1{
+    position: relative;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: 0px 20px 0px 10px;
+}
+.foodContainer input::placeholder{
+    color: gray !important;
+}
+.foodContainer2{
+    position: relative;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: 0px 20px 0px 10px;
+    height: 70vh;
+}
+.myBtn{
+    background-color: #0D0D0D;
+    color: #82232b;
+    border: 1px solid #7e232a;
+    cursor: default !important;
+}
+
+.myBtn1{
+    background-color: #0D0D0D;
+    color: #eb4654;
+    border: 1px solid #d83d4a;
+    cursor: pointer !important;
+    transition: all 0.3s;
+}
+
+.myBtn1:hover,.myBtn1:focus{
+    background-color: #eb4654;
+    color: white;
+    box-shadow: 0px 0px 3px 3px #eb4654;
+}
+
+.foodContainer2 input::placeholder{
+    color: gray !important;
+}
+.foodContainer2 input{
+    background-color: white !important;
+    color: black !important;
+}
+@media screen and (max-width:1000px) {
+    aside{
+        width: 50%;
+    }
+    .navigator{
+        width: 10%;
+    }
+    .Links{
+        width: 90%;
+    }
+}
+@media screen and (max-width:800px) {
+    .navigator{
+        width: 15%;
+    }
+    .Links{
+        width: 85%;
+    }
+    .Recipes li,.Tags li{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width:400px) {
+    .navigator{
+        width: 20%;
+    }
+    .Links{
+        width: 80%;
+        font-size: 12px;
+    }
+}
