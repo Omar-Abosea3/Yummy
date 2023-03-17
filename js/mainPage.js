@@ -18,5 +18,4 @@ export default async function myFood(str){
             getSingle(arr[i].idMeal)
         })
     }
-    console.log(arr);
 }
