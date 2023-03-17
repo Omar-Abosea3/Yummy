@@ -10,7 +10,6 @@ export default function getCategory(){
             let x = await fetch(`https://www.themealdb.com/api/json/v1/1/categories.php`);
             let res = await x.json();
             arr = res.categories;
-            console.log(arr);
             $('.foodContainer').html('');
             for( let i = 0; i < arr.length ; i++){
                 $('.foodContainer').append(`<div class="col-12 col-sm-12 col-md-6 col-lg-3 px-2">
@@ -40,7 +39,6 @@ function getCategoryOfMeals(cat){
         let x = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${cat}`);
         let res = await x.json();
         let arr = res.meals;
-        console.log(arr);
         $('.foodContainer').html('');
         for( let i = 0; i < arr.length ; i++){
             $('.foodContainer').append(`<div class="col-12 col-sm-12 col-md-6 col-lg-3 px-2">
