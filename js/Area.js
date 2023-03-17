@@ -9,7 +9,6 @@ export default function getArea(){
             let x = await fetch(`https://www.themealdb.com/api/json/v1/1/list.php?a=list`);
             let res = await x.json();
             let arr = res.meals;
-            console.log(arr);
             $('.foodContainer').html('');
             for(let i = 0 ; i < arr.length ;i++){
                 $('.foodContainer').append(`<div class="col-12 col-sm-12 col-md-6 col-lg-3 px-2">
@@ -40,8 +39,6 @@ function getMailByArea(area){
         let x = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${area}`);
         let res = await x.json();
         let arr = res.meals;
-        console.log(res);
-        console.log(arr);
         $('.foodContainer').html('');
         for(let i = 0 ; i < arr.length ; i++ ){
             $('.foodContainer').append(`<div class="col-12 col-sm-12 col-md-6 col-lg-3 px-2">
