@@ -66,28 +66,21 @@ export default function contactUs(){
             </div>`)
             $('#myName').keyup(function(){
                 nameResult();
-                console.log(nameValidation());
             })
             $('#myEmail').keyup(function(){
                 emailResult();
-                console.log(nameValidation());
             })
             $('#myPhone').keyup(function(){
                 phoneResult();
-                console.log(nameValidation());
             })
             $('#myAge').keyup(function(){
                 ageResult();
-                console.log(nameValidation());
             })
             $('#myPassword').keyup(function(){
                 passwordResult();
-                console.log(nameValidation());
             })
             $('#myRepassword').keyup(function(){
-                writeInformation();
                 rePasswordResult();
-                console.log(repasswordValidation());
             })
         })
         $('.loadingScrean').fadeOut(300,function(){
