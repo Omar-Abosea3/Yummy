@@ -55,9 +55,7 @@ export default function getSingle(id){
             $('.Tags').html(`<li class="px-3">${arr[0].strTags}</li>`)
         }
     }
-    console.log(newArr);
-    console.log(newArr2);
-    console.log(arr);
+        
     });
     $('.loadingScrean').fadeOut(300);
 }
