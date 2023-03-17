@@ -24,9 +24,7 @@ showSearch();
 contactUs();
 
 
-let mystr="omar";
 
-console.log(mystr.slice(0,2));
 
 
 
