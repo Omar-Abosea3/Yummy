@@ -85,9 +85,10 @@ aside li,i{
     text-align: center;
 }
 .Tags li{
-    background-color: #F8D7DA;
+   background-color: #F8D7DA;
     color: #842029;
-    margin: 0px 5px 10px 0px;
+    width: fit-content;
+    margin: 0px 5px 5px 0px;
     font-size: 18px;
     font-weight: lighter;
     border-radius: 10px;
