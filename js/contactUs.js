@@ -14,8 +14,8 @@ export default function contactUs(){
     $('#Contact').click(function(){
         $('.foodContainer2').css('display','flex');
         $('body').css('overflow','hidden');
-        $('.foodContainer').html('');
-        $('.foodContainer1').html('');
+        $('.foodContainer').css('display','none').html('');
+        $('.foodContainer1').css('display','none');
         $('.loadingScrean').fadeIn(300 , function(){
             $('.foodContainer2').html(`<div class="col-12 col-sm-12 col-md-6 col-lg-6 px-2">
             <div class="px-2">                
@@ -66,21 +66,28 @@ export default function contactUs(){
             </div>`)
             $('#myName').keyup(function(){
                 nameResult();
+                console.log(nameValidation());
             })
             $('#myEmail').keyup(function(){
                 emailResult();
+                console.log(nameValidation());
             })
             $('#myPhone').keyup(function(){
                 phoneResult();
+                console.log(nameValidation());
             })
             $('#myAge').keyup(function(){
                 ageResult();
+                console.log(nameValidation());
             })
             $('#myPassword').keyup(function(){
                 passwordResult();
+                console.log(nameValidation());
             })
             $('#myRepassword').keyup(function(){
+                writeInformation();
                 rePasswordResult();
+                console.log(repasswordValidation());
             })
         })
         $('.loadingScrean').fadeOut(300,function(){
