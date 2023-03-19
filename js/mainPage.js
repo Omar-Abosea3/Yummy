@@ -4,6 +4,9 @@ let arr;
 export default async function myFood(str){
     let x = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${str}`);
     let res= await x.json();
+    $('.foodContainer2').css('display','none');
+    $('.foodContainer1').css('display','none');
+    $('.foodContainer').css('display','flex');
     arr = res.meals;
     for(let i = 0 ; i < arr.length ; i++ ){
         $('.foodContainer').append(`<div class="col-12 col-sm-12 col-md-6 col-lg-3 px-2">
@@ -18,4 +21,5 @@ export default async function myFood(str){
             getSingle(arr[i].idMeal)
         })
     }
+    console.log(arr);
 }
