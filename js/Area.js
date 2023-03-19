@@ -3,12 +3,15 @@ import  getSingle  from './single.js';
 getSingle
 export default function getArea(){
     $('#Area').click(function(){
-        $('.foodContainer2').css('display','none');;
+        $('.foodContainer2').css('display','none');
+        $('.foodContainer1').css('display','none');
+        $('.foodContainer').css('display','flex');
         $('body').css('overflow','hidden');
         $('.loadingScrean').fadeIn(300 , async function(){
             let x = await fetch(`https://www.themealdb.com/api/json/v1/1/list.php?a=list`);
             let res = await x.json();
             let arr = res.meals;
+            console.log(arr);
             $('.foodContainer').html('');
             for(let i = 0 ; i < arr.length ;i++){
                 $('.foodContainer').append(`<div class="col-12 col-sm-12 col-md-6 col-lg-3 px-2">
@@ -39,6 +42,8 @@ function getMailByArea(area){
         let x = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${area}`);
         let res = await x.json();
         let arr = res.meals;
+        console.log(res);
+        console.log(arr);
         $('.foodContainer').html('');
         for(let i = 0 ; i < arr.length ; i++ ){
             $('.foodContainer').append(`<div class="col-12 col-sm-12 col-md-6 col-lg-3 px-2">
